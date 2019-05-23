@@ -1,0 +1,40 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Javascript</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nomeid" class="nomeclass">
+        <input type="text" name="input2" id="inputId2">
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+        //getElementById retorna um elemenot com o id correspondente
+        var inputElement = document.getElementById('nomeid')
+        //getElementsByTagName retorna vetor com todos os elementos inputs
+        var inputElement2 = document.getElementsByTagName('input')[0]; 
+        //getElementsByClassName retorna vetor com todas as tags com a class procurada
+        var inputElement3 = document.getElementsByClassName('nomeclass')[0]; 
+
+        // Modos mais completos de trazer o input
+        var inputElementSmartWay = document.querySelector('body div#app input');
+        var inputElementSmartWay2 = document.querySelector('input[name=nome]');
+        // Para retornar todos os elementos encontrados só usar
+        // querySelectorAll
+        var inputElementSmartWay3 = document.querySelector('input');
+
+        // Para programar um botão que está na interface:
+        
+        // query que procura pelo primeiro botão com a class "botao":
+        var btnElement = document.querySelector('button.botao');
+        // chamar evento do click do botão para disparar aviso dinamicamente:
+        btnElement.onclick = function(){
+            var txt = inputElement.value; //pegando texto que foi escrito no primeiro input;
+            alert(txt + ', você pressionou o botão!!!!');
+        }
+
+    </script>
+</body>
+</html>
