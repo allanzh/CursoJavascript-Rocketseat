@@ -1,0 +1,40 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Javascript</title>
+</head>
+<body>
+    <div id="app">
+        <input id= "nome" type="text">
+    </div>
+
+    <script>
+        // Criando dinamicamente um elemento
+        var linkElement = document.createElement('a');
+
+        // Adicionando propriedade href no elemento criado
+        //linkElement.href = 'http://www.google.com';
+        linkElement.setAttribute('href', 'http://www.google.com');
+        
+        linkElement.title = "Teste de Titulo";
+        //linkElement.setAttribute('title', 'http://www.google.com');
+
+
+        // Criando elemento de texto para aparecer com o link
+        var txtElement = document.createTextNode('Acessar o google');
+
+        // Posicionar o txt dentro do link
+        linkElement.appendChild(txtElement);
+
+        // Adicionando meu link criado dinamicamente ao conteúdo do html
+        //var containerElement = document.getElementById('app');
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElement);
+
+        // Removendo elementos de tela:
+        var inputElement = document.querySelector('#nome');
+        containerElement.removeChild(inputElement);
+
+    </script>
+</body>
+</html>
