@@ -112,7 +112,6 @@ var usuarios = [
 ];
 
 function agruparString(usuarios){
-    var habilidadesString = 'possui as habilidades: '
     usuarios.forEach(element => {
         console.log('O ' + element.nome + ' possui as habilidades: ' + element.habilidades)
     });
